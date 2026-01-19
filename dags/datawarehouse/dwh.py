@@ -23,7 +23,7 @@ def staging_table():
 
     conn, cur = None, None
 
-    try:
+    try: 
 
         conn, cur = get_conn_cursor()
 
