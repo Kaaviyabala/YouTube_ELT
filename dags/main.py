@@ -53,7 +53,6 @@ with DAG(
     trigger_update_db = TriggerDagRunOperator(
         task_id="trigger_update_db",
         trigger_dag_id="update_db",
-        reset_dag_run=True,
     )
 
     # Define dependencies
@@ -75,8 +74,6 @@ with DAG(
     trigger_data_quality = TriggerDagRunOperator(
         task_id="trigger_data_quality",
         trigger_dag_id="data_quality",
-        reset_dag_run=True,
-        
     )
 
     # Define dependencies
