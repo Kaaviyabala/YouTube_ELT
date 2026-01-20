@@ -55,11 +55,10 @@ with DAG(
         trigger_dag_id="update_db",
     )
 
-
     # Define dependencies
     playlist_id >> video_ids >> extract_data >> save_to_json_task >> trigger_update_db
- 
 
+ 
 # DAG 2: update_db
 with DAG(
     dag_id="update_db",
